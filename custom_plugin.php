@@ -46,10 +46,12 @@ function custom_plugin_all_page_func(){
 
 function css_js_file_calling(){
     wp_enqueue_style('style',PLUGIN_URL.'/custom_plugin/assets/css/style.css','','1.0','all');
+    wp_enqueue_style('bootstrap','https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css','','5.3.3');
 
     wp_enqueue_script('jquery');
 
     wp_enqueue_script('jquery-validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js', ['jquery'], '1.19.5', true);
+    wp_enqueue_script('bootstrap','https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js','','5.3.3');
     wp_enqueue_script('script',PLUGIN_URL.'/custom_plugin/assets/js/script.js',array('jquery'),'1.0',true);
 
 
